@@ -1,0 +1,22 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: psmdb-metrics
+  labels:
+    app: psmdb-metrics
+    app.kubernetes.io/component: metrics
+    app.kubernetes.io/instance: psmdb-db
+    app.kubernetes.io/managed-by: Helm
+spec:
+  ports:
+    - name: http-metrics
+      protocol: TCP
+      port: 9216
+      targetPort: 9216
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/instance: mongodb-db
+    app.kubernetes.io/managed-by: percona-server-mongodb-operator
+    app.kubernetes.io/name: percona-server-mongodb
+    app.kubernetes.io/part-of: percona-server-mongodb
+    app.kubernetes.io/replset: rs0
