@@ -1,5 +1,7 @@
 # MongoDB
 
+### Blog Link - https://tabhay.hashnode.dev/running-high-availability-mongodb-on-kubernetes
+
 # About
 
 The Percona Operator for MongoDB automates the creation, modification, or deletion of items in your Percona Server for MongoDB environment. The Operator contains the necessary Kubernetes settings to maintain a consistent Percona Server for MongoDB instance.
